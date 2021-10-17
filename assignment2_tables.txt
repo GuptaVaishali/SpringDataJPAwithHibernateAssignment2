@@ -1,0 +1,30 @@
+/**************** JPQL and Native Query Tables ************************************/
+
+create table employeeTable(empId int primary key not null auto_increment,
+empFirstName varchar(20),empLastName varchar(20), empSalary int, empAge int)
+
+
+ Update employee Set salary = 75000 where salary < (select avg(salary) from employee)
+
+ERROR 1093 (HY000): You can't specify target table 'emp' for update in FROM clause
+
+
+/*************************** Component Mapping Table *******************************/
+
+create table employeemapping(id int primary key not null auto_increment, firstname varchar(20),
+lastname varchar(20), age int, basicsalary double, bonussalary double, taxamount double,
+specialallowancesalary double)
+
+
+/************************** Inheritance Tables *************************************/
+
+
+/************************ Single Table Strategy ************************************/
+
+
+/********************** Table Per Class Strategy *********************************/
+
+
+
+
+/**************************** Joined Strategy **********************************/
